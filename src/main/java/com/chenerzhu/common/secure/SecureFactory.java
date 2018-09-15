@@ -20,6 +20,9 @@ public class SecureFactory {
             case SHA:
                 secure = new SHASecure();
                 break;
+            case HmacSHA256:
+                secure = new HmacSHA256Secure(key);
+                break;
             case DES:
                 if (key != null && !"".equals(key)) {
                     secure = new DESSecure(key);

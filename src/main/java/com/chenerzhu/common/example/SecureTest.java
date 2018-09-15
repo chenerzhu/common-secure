@@ -4,7 +4,6 @@ package com.chenerzhu.common.example;
 import com.chenerzhu.common.common.SecureType;
 import com.chenerzhu.common.secure.*;
 import com.chenerzhu.common.util.CoderUtil;
-import org.apache.commons.codec.binary.Base64;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -154,10 +153,10 @@ public class SecureTest {
     public void testBase64() throws IOException {
         //dGVzdCBzZWN1cmU=
         System.out.println(CoderUtil.encodeBase64(INPUT_STR.getBytes()));
-        System.out.println(new String(Base64.encodeBase64(INPUT_STR.getBytes())));
+        System.out.println(new String(CoderUtil.encodeBase64(INPUT_STR.getBytes())));
 
         System.out.println(new String(CoderUtil.decodeBase64("dGVzdCBzZWN1cmU=")));
-        System.out.println(new String(Base64.decodeBase64("dGVzdCBzZWN1cmU=".getBytes())));
+        System.out.println(new String(CoderUtil.decodeBase64("dGVzdCBzZWN1cmU=")));
     }
 
 }

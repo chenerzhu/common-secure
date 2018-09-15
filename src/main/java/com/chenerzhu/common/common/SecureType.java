@@ -10,7 +10,8 @@ public enum SecureType {
     DES("DES"),
     AES("AES"),
     DES3("DESede"),
-    SHA("SHA");
+    SHA("SHA"),
+    HmacSHA256("HmacSHA256");
 
     public enum SignAlgorithm{
         MD5withRSA("MD5withRSA"),
